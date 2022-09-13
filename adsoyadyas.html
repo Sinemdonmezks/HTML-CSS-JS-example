@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+      width: auto;
+      height: 500px;
+        border: 1px solid green;
+        border-radius: 30px;
+        background-color: darkseagreen;
+        padding:10px;
+        padding-left: 40%;
+        flex-direction: row;
+        flex-wrap : wrap;
+        justify-content : center;
+        
+      "
+    >
+      <input type="text" id="name" placeholder="isminiz.." style="margin:10px "/> <br />
+      <input type="text" id="surname" placeholder="soyisminiz.." style="margin:10px"/> <br />
+      <input type="text" id="age" placeholder="yaşınız.."style="margin:10px" /> <br />
+      <button onclick="tabloyaEkle() " style="margin:10px">Tabloya Ekle</button>
+      <button onclick="tabloyuTemizle()" style="margin:10px">Tabloyu Temizle</button>
+      <table id="tablo"  style=" background-color:rgba(247, 233, 152, 0.418) ; border: 1px solid black;">
+        <tr>
+          <th>İsim</th>
+          <th >Soyisim</th>
+          <th >Yaş</th>
+        </tr>
+      </table>
+    </div>
+    <script>
+      function tabloyaEkle() {
+        var name = document.getElementById("name");
+        var surname = document.getElementById("surname");
+        var age = document.getElementById("age");
+        tablo.innerHTML += ` <tr>
+                <th>${name.value}</th>
+                <th>${surname.value}</th>
+                <th>${age.value}</th>
+            </tr>
+            `;
+      }
+      function tabloyuTemizle() {
+        var tablo = document.getElementById("tablo");
+        tablo.innerHTML = ` <table id="tablo">
+            <tr>
+                <th>İsim</th>
+                <th>Soyisim</th>
+                <th>Yaş</th>
+            </tr>
+        </table>
+        `;
+        var number = parseInt();
+      }
+    </script>
+  </body>
+</html>
